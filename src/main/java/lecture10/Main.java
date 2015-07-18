@@ -1,3 +1,5 @@
+package lecture10;
+
 /**
  * Class {@link Main}
  *
@@ -12,7 +14,7 @@ public class Main {
         Main main = new Main();
         Main main2=new Main();
 
-        System.out.println("Main created " + count + " again" );
+        System.out.println("lecture10.Main created " + count + " again" );
     }
 
     public Main() {
