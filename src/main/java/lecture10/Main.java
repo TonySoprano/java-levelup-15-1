@@ -10,9 +10,9 @@ import java.io.InputStreamReader;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter the number of objects to create:");
+        System.out.println("Enter the number of objects to create:5");
         Integer number = Integer.parseInt(bufferedReader.readLine());
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < number; i++) {
             new Test();
         }
         System.out.println("Created " + Test.getCounter() + " objects");
