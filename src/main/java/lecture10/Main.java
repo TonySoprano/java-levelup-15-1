@@ -10,7 +10,7 @@ public class Main {
        new Main();
        new Main();
        new Main();
-        System.out.println(count);
+        System.out.println(getCount());
     }
 
     public Main() {
