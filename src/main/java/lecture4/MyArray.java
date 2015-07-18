@@ -16,7 +16,7 @@ public abstract class MyArray {
     protected static Integer count = 0;
 
     MyArray(){
-        this.count++;
+        count++;
     }
     public abstract boolean initializeArray();
     public abstract void sortArray();
