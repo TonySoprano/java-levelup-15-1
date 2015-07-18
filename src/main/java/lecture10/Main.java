@@ -7,9 +7,9 @@ public class Main {
     private static int count;
 
     public static void main(String[] args) {
-        Main main = new Main();
-        Main main1 = new Main();
-//        Main main2 = new Main();
+       new Main();
+       new Main();
+       new Main();
         System.out.println(count);
     }
 
