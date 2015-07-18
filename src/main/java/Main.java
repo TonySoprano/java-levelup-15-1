@@ -5,7 +5,7 @@ package main.java;
  *
  * @author Oleg Kalinichenko
  * @version 1.0
- * @since 15.07.2015
+ * @since 15.07.2015 
  */
 public class Main {
 }
