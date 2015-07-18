@@ -1,3 +1,5 @@
+package main.java;
+
 /**
  * Class {@link Main}
  *
