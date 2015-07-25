@@ -29,14 +29,13 @@ public class Main {
         container2.addMass(6);
         container2.addMass(7);
 
-
         for (int i = 0; i < 10; i++) {
-            System.out.println(i +" "+ container1.getMass(i));
+            System.out.println(i +" "+ container1.getMass(i)  +" "+ container2.getMass(i));
         }
         container1.delMass();
         System.out.println();
         for (int j = 0; j < 10; j++) {
-            System.out.println(j +" "+ container1.getMass(j));
+            System.out.println(j +" "+ container1.getMass(j) +" "+ container2.getMass(j));
         }
     }
 }
