@@ -20,7 +20,7 @@ public class Main {
         container1.addMass("one7");
         container1.addMass("one8");
         container1.addMass("one9");
-        container1.addMass("one10");
+//        container1.addMass("one10");
         container2.addMass(1);
         container2.addMass(2);
         container2.addMass(3);
