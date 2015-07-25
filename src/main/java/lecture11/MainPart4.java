@@ -11,7 +11,7 @@ public class MainPart4 {
     public static GoodContainer<String> container1 = new GoodContainer<String>();
 //    public static GoodContainer<Integer> container2 = new GoodContainer<Integer>();
     public static void main(String[] args) {
-        container1.setField(1);
+        container1.setField("");
 //        container2.setField(1);
 //        container2.g
     }
