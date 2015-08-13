@@ -28,10 +28,11 @@ public class MyList <T>{
         do {
             indexInner++;
             cellBuffer = cellBuffer.nextCell;
-        }while (indexInner!=index);
+        }while (indexInner<index);
         CellList cell = new CellList(data,cellBuffer.prevCell, cellBuffer);
+        cellBuffer.prevCell.nextCell = cell;
         cellBuffer.prevCell = cell;
-        cell.nextCell = cellBuffer;
+        //cell.nextCell = cellBuffer;
         size++;
 
     }
@@ -57,6 +58,16 @@ public class MyList <T>{
         }
         while (i <= index);
         return  element;
+    }
+    public void rmIndex(int index){
+        int indexInner =0;
+        CellList cellBuffer = firstCell;
+        do {
+            indexInner++;
+            cellBuffer = cellBuffer.nextCell;
+        }while (indexInner<index);
+        cellBuffer.prevCell.nextCell = cellBuffer.nextCell;
+        cellBuffer.nextCell.prevCell = cellBuffer.prevCell;
     }
 //    public T getElement(){
 //

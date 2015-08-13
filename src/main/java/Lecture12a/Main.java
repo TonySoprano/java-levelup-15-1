@@ -15,6 +15,7 @@ public class Main {
                 list.add(valueOf(i));
             }
         list.add(2,"12");
+        list.rmIndex(2);
 
 //
 //        System.out.println(list.findElement("2"));
