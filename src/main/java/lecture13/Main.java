@@ -1,12 +1,10 @@
 package main.java.lecture13;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
-
 //    public static Comand<String> container = new Comand<String>();
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -15,28 +13,28 @@ public class Main {
         String[] s = number.split(" ");
 //        System.out.println(s[0]);
 
-        if(s[0].equals("rm")) {
-            TRm TRm = new TRm();
-            new Main().comand(TRm, s[1]);
-        }else if(s[0].equals("ls")){
-            Ls ls = new Ls();
-            new Main().comand(ls,s[1]);
-        }else if(s[0].equals("mv")) {
-            Mv mv = new Mv();
-            new Main().comand(mv,s[1],s[2]);
-        }else System.out.println("Неверная команда");
+
+//        if (s[0].equals("rm")) {
+//            TRm TRm = new TRm();
+//            new Main().comand(TRm, s[1]);
+//        } else if (s[0].equals("ls")) {
+//            Ls ls = new Ls();
+//            new Main().comand(ls, s[1]);
+//        } else if (s[0].equals("mv")) {
+//            Mv mv = new Mv();
+//            new Main().comand(mv, s[1], s[2]);
+//        } else System.out.println("Неверная команда");
         //        System.out.println(s[1]);
-
-
     }
-    public void comand(Comand com,String t) throws IOException {
+
+    public void comand(Comand com, String t) throws IOException {
         com.comand(t);
     }
 
     public void comand(Comand com, String t, String t1) throws IOException {
-        String t2 = t +" "+ t1;
+        String t2 = t + " " + t1;
         com.comand(t2);
-    };
+    }
 
 }
 

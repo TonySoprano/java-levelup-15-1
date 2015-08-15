@@ -13,31 +13,25 @@ import java.io.InputStreamReader;
 //        не найден. Если метод на удаление вернул true - вывести что файл\папка успешно удаленны
 public class TRm implements Comand {
     @Override
-    public void comand(String t) throws IOException {
+    public boolean check(String t) {
+        if(t.equals("rm")){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String comand(String t) throws IOException {
 //        System.out.println("Удаление = " + t);
         File file = new File(t);
-        if(file.isDirectory()){
+        if (file.isDirectory()) {
+            delFile(file);
+            return String.format("Директория %s удалена", t);
+
+        } else if (file.exists()) {
             file.delete();
-            if(file.isDirectory()){
-//                System.out.printf("Удаление непустой директории %s не поддерживается",t);
-                System.out.printf("Директория %s :\n", t);
-                for (String i : file.list()) {
-                    System.out.println(i);
-                }
-                System.out.printf("Удаление непустой директории %s! нажмите Y (если ДА) или любую клавишу (если НЕТ)\n",t);
-                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-                String f = reader.readLine();
-                if(f.equals("ДА")){
-                    delFile(file);
-                    System.out.printf("Директория %s удалена", t);
-                } else System.out.printf("Директория %s неудалена", t);
-            }else {
-                System.out.printf("Директория %s удалена", t);
-            }
-        }else if(file.exists()){
-            file.delete();
-                 System.out.printf("Файл %s удален",t);
-             } else System.out.printf("Директории/файла %s не существует",t);
+            return String.format("Файл %s удален", t);
+        } else return String.format("Директории/файла %s не существует", t);
     }
 
     public void delFile(File dir) throws IOException {

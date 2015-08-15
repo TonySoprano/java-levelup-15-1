@@ -11,18 +11,27 @@ package main.java.lecture13;
 import java.io.File;
 
 public class Ls implements Comand {
+
     @Override
-    public void comand(String t) {
+    public boolean check(String t) {
+        if(t.equals("ls")){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public String comand(String t) {
 //        System.out.println("Отображение = " + s);
         File file = new File(t);
-        if(file.isDirectory()){
-                System.out.printf("Директория %s :\n", t);
-                for (String i : file.list()) {
-                    System.out.println(i);
-                }
-        }else if(file.exists()){
-            System.out.printf("Команда %s неверна, работает только для директорий",t);
-        } else System.out.printf("Директории/файла %s не существует",t);
+        String r = null;
+        if (file.isDirectory()) {
+            for (String i : file.list()) {
+                r += i + "\n";
+            }return r;
+        } else if (file.exists()) {
+            return String.format("Команда %s неверна, работает только для директорий", t);
+        } else return String.format("Директории/файла %s не существует", t);
     }
 }
 
