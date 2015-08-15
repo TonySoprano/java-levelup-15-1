@@ -1,29 +1,7 @@
 package main.java.lecture13;
-//1.        > Шаблон      rm $url
-//        > Примеры    rm C://dirName     |     rm C://dir1/dir2/file.txt
-//        > Если запрос на удаление директории и она не пустая - вернуть текст с тем что удаление не пустых директорий не
-//        поддердивается (Плюсом будет удалить и не пустую, тобиш пройтись рекурсией по всему содержимому и удалить все
-//        начиная с самого верха и заканчивая переданной директорией). Если переданный файл не найден - вывести что файл
-//        не найден. Если метод на удаление вернул true - вывести что файл\папка успешно удаленны
-// 2.
-//        > Шаблон      ls $url
-//        > Примеры    ls C://dirName
-//        > Если передали файл - вывести пользователю команда работает только с папками. Если не найдено - вывести что не
-//        найдено. Если директория - вывести на экран все содержимое папки.. Пример вывода:
-//        dir1      1.2m
-//        dir2      1.56k
-//        ads.txt  3.6g
-// 3.
-//        > Шаблон      mv $url-from $url-to
-//        > Примеры    rm C://dir1/ss.txt D://dir3/dir2/ssss.txt
-//        > Если $url-from указывает на не файл - вывести что команда работает только с файлами, если $url-from не найден
-//        - вывести что файл для переноса не найден, если $url-to существует - вывести что файл куда надо переносить уже
-//        существует. Необходимо открыть поток на чтение на $url-from, создать файл по $url-to, и открыть на него поток
-//        на запись, перенести все содержимое, закрыть потоки, удалить файл $url-from, вывести на экран что файл успешно
-//        перенесен
+
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -35,23 +13,29 @@ public class Main {
         System.out.println("Введите запрос: ");
         String number = reader.readLine();
         String[] s = number.split(" ");
-        System.out.println(s[0]);
+//        System.out.println(s[0]);
+
         if(s[0].equals("rm")) {
             TRm TRm = new TRm();
-            new Main().comand(TRm, s[0], s[1]);
+            new Main().comand(TRm, s[1]);
         }else if(s[0].equals("ls")){
             Ls ls = new Ls();
-            new Main().comand(ls, s[0], s[1]);
+            new Main().comand(ls,s[1]);
         }else if(s[0].equals("mv")) {
             Mv mv = new Mv();
-            new Main().comand(mv, s[0], s[1]);
+            new Main().comand(mv,s[1],s[2]);
         }else System.out.println("Неверная команда");
         //        System.out.println(s[1]);
-        File file = new File(s[1]);
+
 
     }
-    public void comand(Comand com, String s, String t) {
-        com.comand(s, t);
+    public void comand(Comand com,String t) throws IOException {
+        com.comand(t);
+    }
+
+    public void comand(Comand com, String t, String t1) throws IOException {
+        String t2 = t +" "+ t1;
+        com.comand(t2);
     };
 
 }
@@ -117,18 +101,4 @@ public class Main {
 //            System.out.println("your line: " + b);
 //        }
 //    }
-//
-//
-//}
-//
-//
-////        for (int i = 0; i < 10; i++) {
-////            System.out.println(i +" "+ container.getMass(i));
-////        }
-////        container.delMass();
-////
-////        System.out.println();
-////        for (int j = 0; j < 10; j++) {
-////            System.out.println(j +" "+ container.getMass(j));
-////        }
-//    }
+
