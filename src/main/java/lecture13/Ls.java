@@ -11,10 +11,9 @@ package main.java.lecture13;
 import java.io.File;
 
 public class Ls implements Comand {
-
     @Override
     public boolean check(String t) {
-        if(t.equals("ls")){
+        if (t.equals("ls")) {
             return true;
         }
         return false;
@@ -24,13 +23,14 @@ public class Ls implements Comand {
     public String comand(String t) {
 //        System.out.println("Отображение = " + s);
         String[] s = t.split(" ");
-        t=s[1];
+        t = s[1];
         File file = new File(t);
-        String r = null;
+        String r = "";
         if (file.isDirectory()) {
             for (String i : file.list()) {
                 r += i + "\n";
-            }return r;
+            }
+            return r;
         } else if (file.exists()) {
             return String.format("Команда %s неверна, работает только для директорий", t);
         } else return String.format("Директории/файла %s не существует", t);

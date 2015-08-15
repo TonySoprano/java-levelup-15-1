@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 public class TRm implements Comand {
     @Override
     public boolean check(String t) {
-        if(t.equals("rm")){
+        if (t.equals("rm")) {
             return true;
         }
         return false;
@@ -24,7 +24,7 @@ public class TRm implements Comand {
     public String comand(String t) throws IOException {
 //        System.out.println("Удаление = " + t);
         String[] s = t.split(" ");
-        t=s[1];
+        t = s[1];
         File file = new File(t);
         if (file.isDirectory()) {
             delFile(file);

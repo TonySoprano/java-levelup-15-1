@@ -13,7 +13,7 @@ import java.io.*;
 public class Mv implements Comand {
     @Override
     public boolean check(String t) {
-        if(t.equals("mv")){
+        if (t.equals("mv")) {
             return true;
         }
         return false;
@@ -35,7 +35,6 @@ public class Mv implements Comand {
             return String.format("Файл %s уже существует", s[2]);
         } else return String.format("Файла %s для переноса не существует", s[1]);
     }
-
 
 
     private static void mvTest(File file, File file1) throws IOException {
