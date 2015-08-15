@@ -1,5 +1,6 @@
 package Lecture13;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -9,28 +10,34 @@ public class EnterCommand {
     String file;
     private String command;
     private String fileName;
+    public ArrayList<String> listcommand = new ArrayList<String>();
 
     public void TypeSomething() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the file");
+        System.out.print("Enter the command:");
         file = scanner.nextLine();
-    }
+
 //        System.out.println(file);
         // Finding first word in the input string ( Command)
-
-        public String getCommand(){
-            command = file.substring(0,file.indexOf(" "));
-            return command;
+        String[] s = file.split(" ");
+        for (int i = 0; i < s.length; i++) {
+            listcommand.add(s[i]);
+        }
     }
-//        System.out.println(command);
-        // Finding second word in the input string (File or directory)
-        public String getFileName() {
-            fileName = file.substring(file.indexOf(" ") + 1);
-            return fileName;
-//            System.out.println(fileName);
+
+    public String getCommand() {
+        if (listcommand.isEmpty()) {
+            return null;
+        } else {
+            command = listcommand.get(0);
+            return command;
         }
 
-
-
     }
+
+    public ArrayList<String> getFileName() {
+         listcommand.remove(0);
+        return listcommand;
+    }
+}
 

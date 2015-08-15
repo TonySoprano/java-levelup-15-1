@@ -1,23 +1,15 @@
 package Lecture13;
 
+import java.util.ArrayList;
+
 /**
  * Created by roman on 13.08.15.
  */
-//public class MyCommand {
-//
-//    public boolean isExist(String command){
-//        return false;
-//    }
-//
-//
-//    public String  doSomething(){
-//        return null;
-//    }
-//}
+
 public interface MyCommand {
 
-     boolean isExist(String command);
+     boolean isValid(String command);
 
 
-     void  doSomething(String file);
+     void  doSomething(ArrayList<String> file);
 }

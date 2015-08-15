@@ -8,7 +8,14 @@ import java.util.ArrayList;
 public class ListCommand {
 
 
-    public ArrayList<MyCommand> list = new ArrayList<MyCommand>();
+    private ArrayList<MyCommand> list = new ArrayList<MyCommand>();
 
+    public void setList(ArrayList<MyCommand> list) {
+        this.list = list;
+    }
+
+    public ArrayList<MyCommand> getList() {
+        return list;
+    }
 }
 
