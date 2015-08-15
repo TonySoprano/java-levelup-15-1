@@ -23,6 +23,8 @@ public class TRm implements Comand {
     @Override
     public String comand(String t) throws IOException {
 //        System.out.println("Удаление = " + t);
+        String[] s = t.split(" ");
+        t=s[1];
         File file = new File(t);
         if (file.isDirectory()) {
             delFile(file);

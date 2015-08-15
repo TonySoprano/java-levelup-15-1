@@ -23,6 +23,8 @@ public class Ls implements Comand {
     @Override
     public String comand(String t) {
 //        System.out.println("Отображение = " + s);
+        String[] s = t.split(" ");
+        t=s[1];
         File file = new File(t);
         String r = null;
         if (file.isDirectory()) {

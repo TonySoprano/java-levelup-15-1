@@ -23,17 +23,17 @@ public class Mv implements Comand {
     public String comand(String t) throws IOException {
 //        System.out.println("Перенос = " + t);
         String[] s = t.split(" ");
-        File file = new File(s[0]);
-        File file1 = new File(s[1]);
+        File file = new File(s[1]);
+        File file1 = new File(s[2]);
         if (file.isDirectory() || file1.isDirectory()) {
             return String.format("%s - неверно, команда работает только с файлами", t);
         } else if (file.exists() && !file1.exists()) {
             mvTest(file, file1);
             file.delete();
-            return String.format("Файл %s перенесен в %s.\nФайл %s удален.", s[0], s[1], s[0]);
+            return String.format("Файл %s перенесен в %s.\nФайл %s удален.", s[1], s[2], s[1]);
         } else if (file1.exists()) {
-            return String.format("Файл %s уже существует", s[1]);
-        } else return String.format("Файла %s для переноса не существует", s[0]);
+            return String.format("Файл %s уже существует", s[2]);
+        } else return String.format("Файла %s для переноса не существует", s[1]);
     }
 
 
