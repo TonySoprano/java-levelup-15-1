@@ -24,7 +24,7 @@ public class TRm implements Comand {
                 for (String i : file.list()) {
                     System.out.println(i);
                 }
-                System.out.printf("Удаление непустой директории %s! нажмите Y (если ДА) или любую клавишу (если НЕТ)\n",t);
+                System.out.printf("Удаление непустой директории %s! нажмите ДА (если ДА) или любую клавишу (если НЕТ)\n",t);
                 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
                 String f = reader.readLine();
                 if(f.equals("ДА")){
