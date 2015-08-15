@@ -37,8 +37,8 @@ public class Main {
         String[] s = number.split(" ");
         System.out.println(s[0]);
         if(s[0].equals("rm")) {
-            Rm rm = new Rm();
-            new Main().comand(rm, s[0], s[1]);
+            TRm TRm = new TRm();
+            new Main().comand(TRm, s[0], s[1]);
         }else if(s[0].equals("ls")){
             Ls ls = new Ls();
             new Main().comand(ls, s[0], s[1]);
