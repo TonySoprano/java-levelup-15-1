@@ -25,10 +25,11 @@ public class Main {
         for (CommandResolver cr : list) {
 
             if (cr.isWorks(parts[0])){
-                cr.ExecuteCommand(parts);
+                System.out.println(cr.ExecuteCommand(parts));
+                return;
             }
         }
-
+        System.out.println("Unknown command!");
     }
 
 
