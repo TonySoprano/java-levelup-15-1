@@ -15,12 +15,12 @@ public class Main {
     public void magaz(InetStore inetStore) {
         inetStore.order();
         inetStore.buy(50);
-    };
+    }
 
     public void magaz(Stylus stylus) {
 //        stylus.config();
         stylus.order();
         stylus.buy(60);
-    };
+    }
 
 }
