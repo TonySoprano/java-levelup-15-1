@@ -10,6 +10,7 @@ public class Square extends Figure {
         return a * b;
     }
 
+
     public Square(double a, double b) {
         this.a = a;
         this.b = b;

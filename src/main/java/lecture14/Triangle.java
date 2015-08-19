@@ -9,6 +9,7 @@ class Triangle extends Figure {
         this.b = b;
     }
 
+
     @Override
     public double area() {
         return a * b / 2;
