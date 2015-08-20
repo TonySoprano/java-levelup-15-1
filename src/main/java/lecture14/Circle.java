@@ -5,15 +5,15 @@ class Circle extends Figure {
 
     public static final double pi = 3.14;
 
-    public Circle(double a) {
+    public Circle(String name, double a) {
         this.a = a;
-//        this.name = name();
+        this.name = name;
     }
 
 
     @Override
     public double area() {
-        return pi * a * a;
+        return pi * Math.pow(pi, 2);
     }
 
 }

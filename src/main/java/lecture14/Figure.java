@@ -3,23 +3,13 @@ package main.java.lecture14;
 
 public abstract class Figure {
 
-    String name;
+    public String name;
     @Override
     public String toString() {
-        return "Figure{" +
-                "name='" + name + '\'' +
-                '}';
+        return  "Square " + this.name + " = " + this.area();
     }
-
 
     public abstract double area();
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 }
 

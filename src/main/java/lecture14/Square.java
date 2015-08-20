@@ -11,9 +11,10 @@ public class Square extends Figure {
     }
 
 
-    public Square(double a, double b) {
+    public Square(String name, double a, double b) {
         this.a = a;
         this.b = b;
+        this.name = name;
     }
 
 }
