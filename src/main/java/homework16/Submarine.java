@@ -6,12 +6,12 @@ package homework16;
 public class Submarine extends Vehicle implements Movable3D {
     @Override
     public void up() {
-
+        System.out.println("Go up by Submarine!");
     }
 
     @Override
     public void down() {
-
+        System.out.println("Go down by Submarine!");
     }
 
 
