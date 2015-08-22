@@ -44,6 +44,5 @@ public class Main {
 
         Vehicle vehicle2 = new Plane("Plane");
 
-
     }
 }
