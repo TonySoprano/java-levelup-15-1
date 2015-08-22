@@ -18,6 +18,7 @@ public class Main {
 //        }
 
         Car vehicle1 = new Car("Car");
+        System.out.println(vehicle1.toString());
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int action;
         do

@@ -6,7 +6,7 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return this.name + "\n " + this.carrying() + "\n" + this.power();
+        return this.name + "\n" + this.carrying() + "\n" + this.power();
     }
 
     public abstract String power();
