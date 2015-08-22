@@ -1,4 +1,4 @@
-package Elena.lecture1;
+package Elena.lecture.lecture1;
 
 /**
  * Created by Oleg Knyazev

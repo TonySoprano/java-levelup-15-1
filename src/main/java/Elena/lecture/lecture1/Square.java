@@ -1,4 +1,6 @@
-package Elena.lecture1;
+package Elena.lecture.lecture1;
+
+import Elena.lecture.lecture1.Figure;
 
 /**
  * Created by Oleg Knyazev
