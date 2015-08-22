@@ -6,22 +6,13 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return this.name + " " + this.left();
+        return this.name + "\n " + this.carrying() + "\n" + this.power();
     }
 
-    public abstract String back();
+    public abstract String power();
 
-    public abstract String stop();
 
-    public abstract String up();
-
-    public abstract String down();
-
-    public abstract String forward();
-
-    public abstract String left();
-
-    public abstract String right();
+    public abstract String carrying();
 
 }
 
