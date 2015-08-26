@@ -4,7 +4,7 @@ package main.java.lecture15;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class MainMap {
     public static void main(String[] args) {
 
         Map<String, String> map = new HashMap<String, String>();
