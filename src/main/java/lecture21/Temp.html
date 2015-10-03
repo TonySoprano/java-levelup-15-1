@@ -12,18 +12,18 @@
         background-size: cover; /* Масштабируем фон */
         color: #ffe; /* Цвет текста */
         }
-        a { color: #008BCE; /* Цвет ссылок */ }
+
         #container {
-        width: 70%; /* Ширина макета */
+        width: 80%; /* Ширина макета */
         margin: 0 auto; /* Выравниваем по центру */
-        height: 1000px;
+        height: 100%;
         background: #FCE600; /* Цвет колонок */
         }
         #header {
         font-size: 2.2em; /* Размер текста */
         text-align: center; /* Выравнивание по центру */
         min-height: 120px;
-        padding: 5px; /* Отступы вокруг текста */
+        padding: 15px; /* Отступы вокруг текста */
         background: url(http://www.masterrats.com/files/slides/separadors/separador_009.jpg) no-repeat; /* Цвет фона
         шапки */
         background-size: cover;
@@ -35,10 +35,11 @@
         float: left; width: 100px; padding: 30px; color: #000;
         }
         #content {
+        margin: 0 100px 0 100px;
         background: url(http://gombots-a.narod.ru/dvizhenie.gif) ;
 
-        /*background: #54B948;*/
-        margin: 0 300px; /* Ширина колонок */
+
+        margin: 0 200px; /* Ширина колонок */
         min-height: 760px;
         padding: 50px;
         }
@@ -67,11 +68,12 @@
         padding: 5px 10px; /* Поля */
         border: 2px solid #333; /* Параметры рамки */
         }
+        .not-learned {
+        color: red;
+        background-color: #FFF0F0;
+        }
     </style>
-    <script>
-document.write(document.getElementById('myinput').value)
 
-    </script>
 </head>
 <body topmargin="20px" onload="alert('Разработано Скитяшин В.А.')">
 <div id="container">
@@ -79,68 +81,71 @@ document.write(document.getElementById('myinput').value)
     <div id="nav">
         <p style="text-align: center" class="photo" data-title="Переход на google"><a
                 href="https://www.google.com.ua/webhp?hl=ru">
-            <button><img width="185px" height="45px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
+            <button><img width="135px" height="35px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
                          alt="1"
                          style="vertical-align: middle"> google
             </button>
         </a></p>
         <p style="text-align: center" class="photo" data-title="Переход на rambler"><a href="http://www.rambler.ru/">
-            <button><img width="185px" height="45px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
+            <button><img width="135px" height="35px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
                          alt="2"
                          style="vertical-align: middle"> rambler
             </button>
         </a></p>
         <p style="text-align: center" class="photo" data-title="Переход на yandex"><a href="https://www.yandex.ua/">
-            <button><img width="185px" height="45px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
+            <button><img width="135px" height="35px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
                          alt="3"
                          style="vertical-align: middle"> yandex
             </button>
         </a></p>
         <p>
 
-        <form method="POST">
+        <form method="POST" action="https://www.youtube.com/embed/5KzuX0verIY">
             <p><strong>ОПРОС</strong></p>
-
+            <hr>
             <p>Понравился сайт?</p>
             <select required size="1" name="name[]">
                 <option disabled>Выберите ответ</option>
                 <option value="Да">Да</option>
                 <option value="Нет">Нет</option>
             </select>
-            <input type="submit" value="Ответить" id="myinput">
+            <input type="submit" value="Ответить" id="myinput" >
         </form>
         </p>
         <div class='question'>Результаты</div>
         <div class='answers'>
             <table cellspacing='0' cellpadding='0' border='0'>
                 <tr>
-                    <td class='ans_label'>ДА </td>
-                    <td class='ans_val'>86   </td>
+                    <td width="120px" class='ans_label'>ДА</td>
+                    <td width="120px" class='ans_val'>86</td>
                     <td class='ans_bar'>
-                        <img src="http://www.developertutorials.com/wp-content/uploads/2008/01/5c.gif" width='23.2' height='10' border='0' class='bar' alt='bar1'  />
+                        <img src="http://www.developertutorials.com/wp-content/uploads/2008/01/5c.gif" width='50'
+                             height='15' border='0' class='bar' alt='bar1'/>
                     </td>
                 </tr>
                 <tr>
-                    <td class='ans_label'>НЕТ </td>
-                    <td class='ans_val'>24   </td>
+                    <td width="120px" class='ans_label'>НЕТ</td>
+                    <td width="120px" class='ans_val'>24</td>
                     <td class='ans_bar'>
-                        <img src="http://www.developertutorials.com/wp-content/uploads/2008/01/5c.gif"width='6.2' height='10' border='0' class='bar' alt='bar2' />
+                        <img src="http://www.developertutorials.com/wp-content/uploads/2008/01/5c.gif" width='12'
+                             height='15' border='0' class='bar' alt='bar2'/>
                     </td>
-               </table>
+            </table>
         </div>
     </div>
 
     <div id="aside">
         <h3>Статистика</h3>
 
-        <p>одиннадцать человек дошли до финала;</p>
+        <p class="not-learned">одиннадцать человек дошли до финала;</p>
 
-        <p>один человек правильно указал в каком стиле писал Диего Веласкес;</p>
+        <p class="not-learned">один человек правильно указал в каком стиле писал Диего Веласкес;</p>
 
-        <p>только один человек знал, кто изобрел пароход;</p>
+        <p class="not-learned">только один человек знал, кто изобрел пароход;</p>
     </div>
     <div id="content">
         <h2><span class="colortext">Опрос общественного мнения показал</span></h2>
+        <hr>
         <ul>
             <li>что пароход изобретен: Петром I, А. Эйнштейном и А. Поповым;</li>
             <li>Диего Веласкес писал свои полотна в стиле: империализма, кубизма
@@ -159,10 +164,9 @@ document.write(document.getElementById('myinput').value)
             </li>
         </ul>
         <p>
-            <iframe width="560" height="315" align="center" src="https://www.youtube.com/embed/5KzuX0verIY"
-                    frameborder="0" allowfullscreen></iframe>
+            <iframe  width="560" height="315" align="center" src="https://www.youtube.com/embed/5KzuX0verIY"
+                    frameborder="0" allowfullscreen ></iframe>
         </p>
-
         <table border="3" align="center" bgcolor="#0000FF">
             <caption><h1>Таблица размеров обуви</h1></caption>
             <tr>
