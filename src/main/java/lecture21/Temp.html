@@ -2,24 +2,217 @@
 <html lang="en">
 <html>
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Моя страница</title>
-</head>
-<body>
-Введите 1 число
-<input type="text" id="txt1" /><br>
-Введите действие
-<input type="text" id="txt2" /><br>
-Введите 2 число
-<input type="text" id="txt3" /><br>
-<input type="button" value="Результат" onclick="f()" />
-<input type="text" id="txt4" /><br>
+    <style type="text/css">
+        body {
+        font: 0.8em Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+        background: url(http://dreempics.com/img/picture/Mar/26/389abebf144d9eaf78173d7cd61bbdab/9.jpg) no-repeat; /*
+        Добавляем фон */
+        background-size: cover; /* Масштабируем фон */
+        color: #ffe; /* Цвет текста */
+        }
+        a { color: #008BCE; /* Цвет ссылок */ }
+        #container {
+        width: 70%; /* Ширина макета */
+        margin: 0 auto; /* Выравниваем по центру */
+        height: 1000px;
+        background: #FCE600; /* Цвет колонок */
+        }
+        #header {
+        font-size: 2.2em; /* Размер текста */
+        text-align: center; /* Выравнивание по центру */
+        min-height: 120px;
+        padding: 5px; /* Отступы вокруг текста */
+        background: url(http://www.masterrats.com/files/slides/separadors/separador_009.jpg) no-repeat; /* Цвет фона
+        шапки */
+        background-size: cover;
+        }
+        #aside {
+        float: right; width: 100px; padding: 30px; color: #000;
+        }
+        #nav {
+        float: left; width: 100px; padding: 30px; color: #000;
+        }
+        #content {
+        background: url(http://gombots-a.narod.ru/dvizhenie.gif) ;
 
-<script>
-  function f()
-  {
-  txt4.value = eval(txt1.value + txt2.value + txt3.value);
-  }
-  </script>
+        /*background: #54B948;*/
+        margin: 0 300px; /* Ширина колонок */
+        min-height: 760px;
+        padding: 50px;
+        }
+        h2 { margin: 0 0 1em; }
+        #footer {
+        clear: both; /* Отменяем действие float */
+        padding: 5px; /* Отступы вокруг текста */
+        background: #D71920; /* Цвет фона подвала */
+        }
+        .colortext {
+        color: red; /* Красный цвет выделения */
+        }
+        .photo {
+        display: inline-block; /* Строчно-блочный элемент */
+        position: relative; /* Относительное позиционирование */
+        }
+        .photo:hover::after {
+        content: attr(data-title); /* Выводим текст */
+        position: absolute; /* Абсолютное позиционирование */
+        left: 100%; top: 0%; /* Положение подсказки */
+        z-index: 1; /* Отображаем подсказку поверх других элементов */
+        background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
+        font-family: Arial, sans-serif; /* Гарнитура шрифта */
+        color: #000000; /* Цвет текста */
+        font-size: 15px; /* Размер текста подсказки */
+        padding: 5px 10px; /* Поля */
+        border: 2px solid #333; /* Параметры рамки */
+        }
+    </style>
+    <script>
+document.write(document.getElementById('myinput').value)
+
+    </script>
+</head>
+<body topmargin="20px" onload="alert('Разработано Скитяшин В.А.')">
+<div id="container">
+    <div id="header"></div>
+    <div id="nav">
+        <p style="text-align: center" class="photo" data-title="Переход на google"><a
+                href="https://www.google.com.ua/webhp?hl=ru">
+            <button><img width="185px" height="45px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
+                         alt="1"
+                         style="vertical-align: middle"> google
+            </button>
+        </a></p>
+        <p style="text-align: center" class="photo" data-title="Переход на rambler"><a href="http://www.rambler.ru/">
+            <button><img width="185px" height="45px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
+                         alt="2"
+                         style="vertical-align: middle"> rambler
+            </button>
+        </a></p>
+        <p style="text-align: center" class="photo" data-title="Переход на yandex"><a href="https://www.yandex.ua/">
+            <button><img width="185px" height="45px" src="http://www.clker.com/cliparts/G/R/m/O/O/v/red-button-th.png"
+                         alt="3"
+                         style="vertical-align: middle"> yandex
+            </button>
+        </a></p>
+        <p>
+
+        <form method="POST">
+            <p><strong>ОПРОС</strong></p>
+
+            <p>Понравился сайт?</p>
+            <select required size="1" name="name[]">
+                <option disabled>Выберите ответ</option>
+                <option value="Да">Да</option>
+                <option value="Нет">Нет</option>
+            </select>
+            <input type="submit" value="Ответить" id="myinput">
+        </form>
+        </p>
+        <div class='question'>Результаты</div>
+        <div class='answers'>
+            <table cellspacing='0' cellpadding='0' border='0'>
+                <tr>
+                    <td class='ans_label'>ДА </td>
+                    <td class='ans_val'>86   </td>
+                    <td class='ans_bar'>
+                        <img src="http://www.developertutorials.com/wp-content/uploads/2008/01/5c.gif" width='23.2' height='10' border='0' class='bar' alt='bar1'  />
+                    </td>
+                </tr>
+                <tr>
+                    <td class='ans_label'>НЕТ </td>
+                    <td class='ans_val'>24   </td>
+                    <td class='ans_bar'>
+                        <img src="http://www.developertutorials.com/wp-content/uploads/2008/01/5c.gif"width='6.2' height='10' border='0' class='bar' alt='bar2' />
+                    </td>
+               </table>
+        </div>
+    </div>
+
+    <div id="aside">
+        <h3>Статистика</h3>
+
+        <p>одиннадцать человек дошли до финала;</p>
+
+        <p>один человек правильно указал в каком стиле писал Диего Веласкес;</p>
+
+        <p>только один человек знал, кто изобрел пароход;</p>
+    </div>
+    <div id="content">
+        <h2><span class="colortext">Опрос общественного мнения показал</span></h2>
+        <ul>
+            <li>что пароход изобретен: Петром I, А. Эйнштейном и А. Поповым;</li>
+            <li>Диего Веласкес писал свои полотна в стиле: империализма, кубизма
+                и империосионизма;
+            </li>
+            <li>Фаросский маяк находится в Фаросе;</li>
+            <li>конфуцианство возникло в: Италии, Корее и Франции;</li>
+            <li>богами торговли и воровства в Древней Греции были: Марс, Меркурий
+                и Дионис;
+            </li>
+            <li>Франция – это город;</li>
+            <li>богами загробного мира в Египте были: Аид, Анубис и Ассирис;</li>
+            <li>столица Золотой Орды — Монголия;</li>
+            <li>главные противники Александра Македонского: татаро-монголы, Дедал
+                и Цезарь;
+            </li>
+        </ul>
+        <p>
+            <iframe width="560" height="315" align="center" src="https://www.youtube.com/embed/5KzuX0verIY"
+                    frameborder="0" allowfullscreen></iframe>
+        </p>
+
+        <table border="3" align="center" bgcolor="#0000FF">
+            <caption><h1>Таблица размеров обуви</h1></caption>
+            <tr>
+                <th>Россия</th>
+                <th>Великобритания</th>
+                <th>Европа</th>
+                <th>Длина ступни, см</th>
+            </tr>
+            <tr bgcolor="#B40431">
+                <td>34,5</td>
+                <td>3,5</td>
+                <td>36</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>35,5</td>
+                <td>4</td>
+                <td>36⅔</td>
+                <td>23–23,5</td>
+            </tr>
+            <tr bgcolor="#B40431">
+                <td>36</td>
+                <td>4,5</td>
+                <td>37⅓</td>
+                <td>23,5</td>
+            </tr>
+            <tr>
+                <td>36,5</td>
+                <td>5</td>
+                <td>38</td>
+                <td>24</td>
+            </tr>
+            <tr bgcolor="#B40431">
+                <td>37</td>
+                <td>5,5</td>
+                <td>38⅔</td>
+                <td>24,5</td>
+            </tr>
+            <tr>
+                <td>38</td>
+                <td>6</td>
+                <td>39⅓</td>
+                <td>25</td>
+            </tr>
+
+        </table>
+        <br>
+
+    </div>
+    <div id="footer">&copy; Скитяшин Владимир</div>
+</div>
 </body>
 </html>
