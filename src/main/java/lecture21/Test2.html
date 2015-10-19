@@ -7,13 +7,15 @@
         #square {
         width: 100px;
         height: 100px;
-        background: red;
+        background: yellow;
         padding: 50px;
+        margin: auto;
         }
         #rectangle {
         width: 200px;
         height: 100px;
         background: green;
+        margin: 0 0 0 300px;
         }
         #circle {
         width: 100px;
@@ -22,90 +24,85 @@
         -moz-border-radius: 50px;
         -webkit-border-radius: 50px;
         border-radius: 50px;
+        margin: 0 300px 0 0;
         }
         #oval {
         width: 200px;
         height: 100px;
         background: red;
+        color: white;
+        font-size: 28px;
         -moz-border-radius: 100px / 50px;
         -webkit-border-radius: 100px / 50px;
         border-radius: 100px / 50px;
-
+        margin: 0 0 0 500px;
         }
         #triangle-up {
         width: 0;
         height: 0;
         border-left: 50px solid transparent;
         border-right: 50px solid transparent;
-        border-bottom: 100px solid red;
+        border-bottom: 100px solid blue;
         }
-
-
-
             @-webkit-keyframes spincube {
-            from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
-            16%      { -webkit-transform: rotateY(-90deg);                           }
-            33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
-            50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
-            66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
-            83%      { -webkit-transform: rotateX(90deg);                            }
+                from,to  { -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+                16%      { -webkit-transform: rotateY(-90deg);                           }
+                33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);            }
+                50%      { -webkit-transform: rotateY(-180deg) rotateZ(90deg);           }
+                66%      { -webkit-transform: rotateY(-270deg) rotateX(90deg);           }
+                83%      { -webkit-transform: rotateX(90deg);                            }
             }
 
             @keyframes spincube {
-            from,to {
-            -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-            -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                from,to {
+                -moz-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                -ms-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+                }
+                16% {
+                -moz-transform: rotateY(-90deg);
+                -ms-transform: rotateY(-90deg);
+                transform: rotateY(-90deg);
+                }
+                33% {
+                -moz-transform: rotateY(-90deg) rotateZ(90deg);
+                -ms-transform: rotateY(-90deg) rotateZ(90deg);
+                transform: rotateY(-90deg) rotateZ(90deg);
+                }
+                50% {
+                -moz-transform: rotateY(-180deg) rotateZ(90deg);
+                -ms-transform: rotateY(-180deg) rotateZ(90deg);
+                transform: rotateY(-180deg) rotateZ(90deg);
+                }
+                66% {
+                -moz-transform: rotateY(-270deg) rotateX(90deg);
+                -ms-transform: rotateY(-270deg) rotateX(90deg);
+                transform: rotateY(-270deg) rotateX(90deg);
+                }
+                83% {
+                -moz-transform: rotateX(90deg);
+                -ms-transform: rotateX(90deg);
+                transform: rotateX(90deg);
+                }
             }
-            16% {
-            -moz-transform: rotateY(-90deg);
-            -ms-transform: rotateY(-90deg);
-            transform: rotateY(-90deg);
-            }
-            33% {
-            -moz-transform: rotateY(-90deg) rotateZ(90deg);
-            -ms-transform: rotateY(-90deg) rotateZ(90deg);
-            transform: rotateY(-90deg) rotateZ(90deg);
-            }
-            50% {
-            -moz-transform: rotateY(-180deg) rotateZ(90deg);
-            -ms-transform: rotateY(-180deg) rotateZ(90deg);
-            transform: rotateY(-180deg) rotateZ(90deg);
-            }
-            66% {
-            -moz-transform: rotateY(-270deg) rotateX(90deg);
-            -ms-transform: rotateY(-270deg) rotateX(90deg);
-            transform: rotateY(-270deg) rotateX(90deg);
-            }
-            83% {
-            -moz-transform: rotateX(90deg);
-            -ms-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-            }
-            }
-
             .cubespinner {
             -webkit-animation-name: spincube;
             -webkit-animation-timing-function: ease-in-out;
             -webkit-animation-iteration-count: infinite;
             -webkit-animation-duration: 12s;
-
             animation-name: spincube;
             animation-timing-function: ease-in-out;
             animation-iteration-count: infinite;
             animation-duration: 12s;
-
             -webkit-transform-style: preserve-3d;
             -moz-transform-style: preserve-3d;
             -ms-transform-style: preserve-3d;
             transform-style: preserve-3d;
-
             -webkit-transform-origin: 60px 60px 0;
             -moz-transform-origin: 60px 60px 0;
             -ms-transform-origin: 60px 60px 0;
             transform-origin: 60px 60px 0;
             }
-
             .cubespinner div {
             position: absolute;
             width: 120px;
@@ -156,14 +153,12 @@
     </style>
 </head>
 <body>
-    <div id="square">dfdg</div><br>
+    <div align="center;" id="square">квадрат</div><br>
     <div id="rectangle"></div><br>
     <div id="circle"></div><br>
-    <div id="oval" align="center"><p><br><br>khgfjvg</p></div><br>
+    <div id="oval" align="center"><p><br>овал</p></div><br>
     <div id="triangle-up"></div><br>
 
-
-    
     <div class="stage" style="width: 120px; height: 120px;">
         <div class="cubespinner">
             <div class="face1">1</div>
