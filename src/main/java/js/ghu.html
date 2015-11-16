@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   <title></title>
+   <style type="text/css">
+       body {
+       background: linear-gradient(#F7FE2E 30%, blue 70%) fixed;
+       }
+       .text {
+       text-align:  center;
+       }
+       .layer1 {
+       font: 20pt sans-serif;
+       position: relative;
+       }
+       p {
+       font-family: Verdana, Arial, Helvetica, sans-serif;
+       font-size: 30pt;
+       color: #DF0174;
+       }
+       a {
+       font-family: Verdana, Arial, Helvetica, sans-serif;
+       font-size: 50pt;
+       color: #DF0174;
+       }
+       #rectangle1 {
+       width: 200px;
+       height: 100px;
+       background: green;
+       float: left;
+       margin-left: 200px;
+       border-radius: 8px;
+       }
+       #rectangle2 {
+       width: 200px;
+       height: 100px;
+       background-color: #DF0174;
+       float: left;
+       margin-left: 200px;
+       border-radius: 8px;
+       }
+       #rectangle3 {
+       width: 200px;
+       height: 100px;
+       float: left;
+       background-color: #424242;
+       margin-left: 200px;
+       border-radius: 8px;
+       }
+       .child {
+       border: 3px solid #666; /* ��������� ����� */
+       padding: 10px; /* ���� ������ ������ */
+       margin: 10px; /* ������� ������ */
+       font: 20pt;
+       color: #F4FA58;
+       }
+   </style>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+   <script type="text/javascript">
+   $(document).ready(function(){
+
+          $("#rectangle1").mouseover(function(){ $("#rectangle1").css("background-color","red");});
+          $("#rectangle1").mouseout(function(){ $("#rectangle1").css("background-color","green");});
+          $("#rectangle1").mouseover(function(){ $("#rectangle1").css("color","green");});
+          $("#rectangle1").mouseout(function(){ $("#rectangle1").css("color","black");});
+
+          $("#rectangle2").mouseover(function(){ $("#rectangle2").css("background-color","red");});
+          $("#rectangle2").mouseout(function(){ $("#rectangle2").css("background-color","#DF0174");});
+          $("#rectangle2").mouseover(function(){ $("#rectangle2").css("color","blue");});
+          $("#rectangle2").mouseout(function(){ $("#rectangle2").css("color","black");});
+
+          $("#rectangle3").mouseover(function(){ $("#rectangle3").css("background-color","red");});
+          $("#rectangle3").mouseout(function(){ $("#rectangle3").css("background-color","#424242");});
+          $("#rectangle3").mouseover(function(){ $("#rectangle3").css("color","green");});
+          $("#rectangle3").mouseout(function(){ $("#rectangle3").css("color","black");});
+
+       $("#rectangle1").toggle(function(event){
+                                     $("#but1").show(1500)
+                                     $("#x").html(event.pageX);
+                                     $("#y").html(event.pageY);
+                                     },
+                               function () {
+                                     $("#but1").hide(1500);
+
+       });
+       $("#rectangle2").toggle(function(){
+                                     $("iframe").fadeIn(3000);
+                                     },
+                               function () {
+                                     $("iframe").fadeOut(3000);
+       });
+       $("#rectangle3").click(function(event){
+                                     $("a").show(1500);
+                                     $("a").animate({fontSize:70},1000);
+                                     $("a").animate({fontSize:"8em"},1000);
+                                     $("a").animate({left:500},1000);
+                                     $("a").animate({top:0,left:0},1000);
+                                     $("a").animate({fontSize:50},1000);
+									 $("a").hide(1500);
+       });
+   });
+   </script>
+</head>
+<body>
+<div class="text">
+<p> Сделайте Ваш выбор: </p>
+</div>
+<div id="rectangle1" align="center" class="layer1">Text</div>
+<div id="rectangle2" align="center" class="layer1">Image</div>
+<div id="rectangle3" align="center" class="layer1">Link</div>
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+<div id="but1" class="child" style="display:none">Курсор мыши во время того как Вы нажали кнопку находился
+   на следующих координатах:<br/><br/> <b>X:<span id="x"></span> Y:<span id="y"> </span></b></div>
+<iframe class="but2" style="display:none" width="400" height="270" src="https://www.youtube.com/embed/KWZGAExj-es"
+       frameborder="0" allowfullscreen></iframe>
+<p><a id="but3" style="display:none" href="http://iconizer.net/files/Gifts/orig/dog.png">Собачка</a></p>
+
+</body>
+
+</html>
+
+
+
+
