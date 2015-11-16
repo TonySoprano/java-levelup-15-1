@@ -76,39 +76,39 @@
           $("#rectangle3").mouseout(function(){ $("#rectangle3").css("color","black");});
 
 		   $("#rectangle1").click(function(){
-					 alert("fdhg");
 					$.ajax({
 						url:"text.html",
 						type:'GET',
 						dataType:'html',
 						isLocal:true
-
 					})
 					.done(function(data){
 						   alert(data);
 						$("#rectangle5").html(data)});
-
 				});
-									
+			 $("#rectangle2").click(function(){
+					$.ajax({
+						url:"text2.html",
+						type:'GET',
+						dataType:'html',
+						isLocal:true
+					})
+					.done(function(data){
+						   alert(data);
+						$("#rectangle6").html(data)});
+				});
+			 $("#rectangle3").click(function(){
+					$.ajax({
+						url:"3.html",
+						type:'GET',
+						dataType:'html',
+						isLocal:true
+					})
+					.done(function(data){
+						   alert(data);
+						$("#rectangle7").html(data)});
+				});
 
-	   
-
-     	   
-       $("#rectangle2").toggle(function(){
-                                     $("iframe").fadeIn(3000);
-                                     },
-                               function () {
-                                     $("iframe").fadeOut(3000);
-       });
-       $("#rectangle3").click(function(){
-                                     $("a").show(1500);
-                                     $("a").animate({fontSize:70},1000);
-                                     $("a").animate({fontSize:"8em"},1000);
-                                     $("a").animate({left:500},1000);
-                                     $("a").animate({top:0,left:0},1000);
-                                     $("a").animate({fontSize:50},1000);
-									 $("a").hide(1500);
-       });
    });
    </script>
 </head>
@@ -117,13 +117,12 @@
 <p> Сделайте Ваш выбор: </p>
 </div>
 <div id="rectangle1" align="center" class="layer1">Text</div>
-
-
 <div id="rectangle2" align="center" class="layer1">Image</div>
 <div id="rectangle3" align="center" class="layer1">Link</div>
-<br>
-<div id="rectangle5"></div>
-
+<br><br><br><br><br><br><br><br>
+<div id="rectangle5"></div><br>
+<div id="rectangle6"></div><br>
+<div id="rectangle7"></div><br>
 </body>
 
 </html>
